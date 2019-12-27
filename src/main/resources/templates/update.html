@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+</head>
+<body>
+<h1>这里是文件上传的地方</h1>
+
+<form action="/save" method="post" enctype="multipart/form-data">
+    <input type="file" name="filePath" id="filePath"/>
+    <button type="submit">提交</button>
+</form>
+</body>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script type="application/javascript">
+    $(function () {
+        tijiao()
+    })
+    function tijiao() {
+        var input = document.getElementById("filePath");
+        // console.log("input.value",input.value)
+        console.log("input.value()",input.valueOf())
+    }
+
+
+
+</script>
+</html>

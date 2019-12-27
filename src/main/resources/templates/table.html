@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>this easypoi</h4>
+<table>
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>身高</th>
+        <th>体重</th>
+        <th>生日</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="people : ${lists}">
+        <td>[[${people.name}]]</td>
+        <td>[[${people.sex}]]</td>
+        <td>[[${people.age}]]</td>
+        <td>[[${people.weight}]]</td>
+        <td>[[${people.height}]]</td>
+        <td>[[${people.birthday}]]</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
